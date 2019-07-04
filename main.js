@@ -24,10 +24,6 @@ function buttonHandler(e) {
     switch (e.target.value) {
         case '=':
             document.getElementById("calculator").value = +(eval(document.getElementById("calculator").value)).toFixed(4);
-            if ((document.getElementById("calculator").value === 'Infinity') || (document.getElementById("calculator").value === '-Infinity')) {
-                document.getElementById("calculator").value = "";
-                break;
-            }
             if (!isFinite(document.getElementById("calculator").value)) {
                 document.getElementById("calculator").value = "";
                 break;
