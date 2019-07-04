@@ -1,0 +1,99 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    background-image: url("math.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-wrapper{
+    padding: 0;
+    background: rgba(232, 249, 255, 0.9);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.input-wrapper {
+    width: 585px;
+    height: 170px;
+}
+
+
+
+label {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+input[type=text] {
+    width: 585px;
+    padding: 60px 20px 0;
+    box-sizing: border-box;
+    font-size: 72px;
+    display: block;
+    height: 160px;
+    border: 5px solid #82ddff;
+    border-radius: 10px;
+    text-align: right;
+}
+
+input {
+    caret-color: transparent;
+}
+
+input[type=button] {
+    width: 280px;
+    height: 160px;
+    border-radius: 10px;
+    border: 5px solid #82ddff;
+    text-align: center;
+    line-height: 160px;
+    font-size: 36px;
+    background-color: #fefffa;
+    color: #2791d3;
+    display: block;
+}
+
+input[type=button].cancel {
+    color: #d95458;
+}
+
+input[type=button].delete {
+    color: #ff8732;
+}
+
+input[type=button].operations {
+    color: #8d6dcc;
+    font-size: 54px;
+    /*font-weight: 800;*/
+}
+
+table {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}

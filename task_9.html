@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Task9</title>
+</head>
+<body>
+<div class="background-wrapper">
+<form class="calculator" >
+    <div class="wrapper">
+        <input type="button" id="cancel" class="form-control cancel" value="C">
+        <input type="button" id="delete" class="form-control delete" value="DEL">
+        <div class="input-wrapper">
+            <label for="calculator"></label>
+            <input type="text" class="form-control" autofocus placeholder="0" id="calculator" value="">
+        </div>
+    </div>
+    <table class="calculator-buttons">
+        <tr>
+            <td>
+                <input type="button" id="seven" class="form-control button" value="7">
+            </td>
+            <td>
+                <input type="button" id="eight" class="form-control button" value="8">
+            </td>
+            <td>
+                <input type="button" id="nine" class="form-control button" value="9">
+            </td>
+            <td>
+                <input type="button" id="divide" class="form-control button operations" value="/">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="four" class="form-control button" value="4">
+            </td>
+            <td>
+                <input type="button" id="five" class="form-control button" value="5">
+            </td>
+            <td>
+                <input type="button" id="six" class="form-control button" value="6">
+            </td>
+            <td>
+                <input type="button" id="multiply" class="form-control button operations" value="*">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="one" class="form-control button" value="1">
+            </td>
+            <td>
+                <input type="button" id="two" class="form-control button" value="2">
+            </td>
+            <td>
+                <input type="button" id="three" class="form-control button" value="3">
+            </td>
+            <td>
+                <input type="button" id="minus" class="form-control button operations" value="-">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="zero" class="form-control button" value="0">
+            </td>
+            <td>
+                <input type="button" id="point" class="form-control button" value=".">
+            </td>
+            <td>
+                <input type="button" id="plus" class="form-control button operations" value="+">
+            </td>
+            <td>
+                <input type="button" id="equals" class="form-control button operations" value="=">
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
