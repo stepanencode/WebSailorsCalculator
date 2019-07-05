@@ -35,8 +35,6 @@ body {
     height: 170px;
 }
 
-
-
 label {
     display: block;
     max-width: 100%;
@@ -44,7 +42,6 @@ label {
 }
 
 input[type=text] {
-    width: 585px;
     padding: 60px 20px 0;
     box-sizing: border-box;
     font-size: 72px;
@@ -69,8 +66,7 @@ input[type=button] {
     font-size: 36px;
     background-color: #fefffa;
     color: #2791d3;
-    /*display: block;*/
-    /*display: inline-block;*/
+
 }
 
 input[type=button].cancel {
@@ -84,7 +80,6 @@ input[type=button].delete {
 input[type=button].operations {
     color: #8d6dcc;
     font-size: 54px;
-    /*font-weight: 800;*/
 }
 
 .calculator-buttons {

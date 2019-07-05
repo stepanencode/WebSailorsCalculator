@@ -1,5 +1,7 @@
 "use strict";
 
+const resultDisplay = document.getElementById("calculator");
+
 function endsWithAny(suffixes, string) {
     return suffixes.some(function (suffix) {
         return string.endsWith(suffix);
@@ -13,49 +15,49 @@ function includesAny(suffixes, string) {
 }
 
 function clearInput(e) {
-    document.getElementById("calculator").value = "";
+    resultDisplay.value = "";
 }
 
 function deleteCharacter(e) {
-    document.getElementById("calculator").value = document.getElementById("calculator").value.slice(0, -1);
+    resultDisplay.value = resultDisplay.value.slice(0, -1);
 }
 
 function buttonHandler(e) {
     switch (e.target.value) {
         case '=':
-            document.getElementById("calculator").value = +(eval(document.getElementById("calculator").value)).toFixed(4);
-            if (!isFinite(document.getElementById("calculator").value)) {
-                document.getElementById("calculator").value = "";
+            resultDisplay.value = +(eval(resultDisplay.value)).toFixed(4);
+            if (!isFinite(resultDisplay.value)) {
+                resultDisplay.value = "";
                 break;
             }
             break;
         case '*':
         case '/':
-            if (document.getElementById("calculator").value.length === 0) {
+            if (resultDisplay.value.length === 0) {
                 break
             }
         case '-':
         case '+':
-            if (includesAny(['+', '-', '*', '/'], document.getElementById("calculator").value.slice(1,-1))) {
-                document.getElementById("calculator").value = +(eval(document.getElementById("calculator").value)).toFixed(4);
+            if (includesAny(['+', '-', '*', '/'], resultDisplay.value.slice(1,-1))) {
+                resultDisplay.value = +(eval(resultDisplay.value)).toFixed(4);
             }
-            if (endsWithAny(['+', '-', '*', '/'], document.getElementById("calculator").value)) {
-                document.getElementById("calculator").value = document.getElementById("calculator").value.slice(0, -1) + e.target.value;
+            if (endsWithAny(['+', '-', '*', '/'], resultDisplay.value)) {
+                resultDisplay.value = resultDisplay.value.slice(0, -1) + e.target.value;
             } else {
-                document.getElementById("calculator").value += e.target.value;
+                resultDisplay.value += e.target.value;
             }
             break;
         case '.':
-            if (!document.getElementById("calculator").value.endsWith('.')) {
-                document.getElementById("calculator").value += e.target.value;
+            if (!resultDisplay.value.endsWith('.')) {
+                resultDisplay.value += e.target.value;
             }
             break;
         default:
-            if (document.getElementById("calculator").value.endsWith('0') && (endsWithAny(['+', '-', '*', '/'],
-                document.getElementById("calculator").value.slice(0, -1)) || document.getElementById("calculator").value.length === 1)) {
-                document.getElementById("calculator").value = document.getElementById("calculator").value.slice(0, -1)
+            if (resultDisplay.value.endsWith('0') && (endsWithAny(['+', '-', '*', '/'],
+                resultDisplay.value.slice(0, -1)) || resultDisplay.value.length === 1)) {
+                resultDisplay.value = resultDisplay.value.slice(0, -1)
             }
-            document.getElementById("calculator").value += e.target.value;
+            resultDisplay.value += e.target.value;
             break;
     }
 }
@@ -65,8 +67,8 @@ function buttonHandlerWrapper(e) {
         buttonHandler(e);
     } catch (exception) {
         if (e.target.value === "=") {
-            alert("Bad Expression: " + document.getElementById("calculator").value);
-            document.getElementById("calculator").value = "";
+            alert("Bad Expression: " + resultDisplay.value);
+            resultDisplay.value = "";
         }
         console.log(exception);
     }
